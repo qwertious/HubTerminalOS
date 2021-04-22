@@ -16,10 +16,7 @@
             document.addEventListener("keyDown", keyDown);
             function keyDown(event) {
                 if(event == "enter") {
-                    paragraph = paragraph + "
-";
-                    paragraph = paragraph + input;
-
+                    paragraph.value = paragraph.value + input.value;
                 }
             }
         </script>
