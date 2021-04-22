@@ -10,11 +10,13 @@
         <input type="text" id="input">
         <script>
             paragraph = document.getElementById("paragraph");
+            input = document.getElementById("input");
             document.addEventListener("keyDown", keyDown);
             function keyDown(event) {
                 if(event == "enter") {
-                    paragraph += "
-" + event;
+                    paragraph = paragraph + "
+";
+                    paragraph = paragraph + input;
 
                 }
             }
