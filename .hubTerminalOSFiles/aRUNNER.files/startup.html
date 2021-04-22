@@ -4,12 +4,20 @@
         HubTerminalOS
     </title>
     <body width="window.innerWidth" height="window.innerHeight">
-        <p>
+        <p id="paragraph">
             Welcome to HubTerminalOS.       
         </p>
-        <input type="text" id="input" style="left: window.innerWidth/2; top: window.innerHeight - (this.height * 2)">
+        <input type="text" id="input">
         <script>
-            
+            paragraph = document.getElementById("paragraph");
+            document.addEventListener("keyDown", keyDown);
+            function keyDown(event) {
+                if(event == "enter") {
+                    paragraph += "
+" + event;
+
+                }
+            }
         </script>
     </body>
 </html>
